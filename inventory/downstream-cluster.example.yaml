@@ -1,0 +1,20 @@
+cluster:
+  name: rke2-workload
+  registration_address: rke2-workload-api.titechsolucoes.com.br
+  registration_vip: 198.51.100.10
+  rke2_channel: stable
+
+servers:
+  - {name: workload-cp-01, address: 198.51.100.11, roles: [etcd, control-plane]}
+  - {name: workload-cp-02, address: 198.51.100.12, roles: [etcd, control-plane]}
+  - {name: workload-cp-03, address: 198.51.100.13, roles: [etcd, control-plane]}
+
+workers:
+  - {name: workload-worker-01, address: 198.51.100.21}
+  - {name: workload-worker-02, address: 198.51.100.22}
+  - {name: workload-worker-03, address: 198.51.100.23}
+  - {name: workload-worker-04, address: 198.51.100.24}
+  - {name: workload-worker-05, address: 198.51.100.25}
+  - {name: workload-worker-06, address: 198.51.100.26}
+  - {name: workload-worker-07, address: 198.51.100.27}
+
