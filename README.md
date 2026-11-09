@@ -4,6 +4,14 @@ Reference implementation for an independent ten-node RKE2 cluster that can run a
 
 ## Architecture
 
+![RKE2 high-availability platform architecture](docs/architecture/rke2-platform-overview.svg)
+
+The diagram shows the independent ten-node workload cluster, its three-node etcd/control-plane quorum, seven-worker tier, ingress flow, and the secure import path into the Rancher management cluster.
+
+- [Open the high-resolution PNG](docs/architecture/rke2-platform-overview.png)
+- [Edit the source in Excalidraw](docs/architecture/rke2-platform-overview.excalidraw)
+- [LinkedIn/portfolio visual](docs/architecture/rke2-high-availability-linkedin.png)
+
 ```text
 External L4 load balancer / VIP: 198.51.100.10
       |-- TCP 9345 -> three RKE2 server nodes
@@ -109,4 +117,3 @@ Then follow [docs/import-to-rancher.md](docs/import-to-rancher.md).
 - [RKE2 high availability](https://docs.rke2.io/install/ha)
 - [RKE2 quick start](https://docs.rke2.io/install/quickstart)
 - [RKE2 advanced configuration](https://docs.rke2.io/advanced)
-
