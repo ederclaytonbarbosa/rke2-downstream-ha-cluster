@@ -1,0 +1,11 @@
+*.kubeconfig
+*kubeconfig*
+rke2*.yaml
+*.token
+*.key
+*.pem
+.env
+.DS_Store
+.idea/
+.vscode/
+
